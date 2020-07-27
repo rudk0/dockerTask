@@ -1,0 +1,22 @@
+version: '3.6'
+
+services:
+  mongo:
+    image: mongo:4.2
+    ports:
+      - 27017:27017
+    volumes:
+      - "ru_dbdata:/data/ru_db"
+    networks:
+      - "app-network"
+
+  api:
+    build: .
+    ports:
+      - 8888:8888
+    networks:
+      - "app-network"
+networks:
+  app-network:
+volumes:
+  ru_dbdata:
