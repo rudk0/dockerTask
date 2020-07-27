@@ -1,3 +1,3 @@
-const db = require('@paralect/node-mongo').connect("mongodb://mongo/docker");
+const db = require('@paralect/node-mongo').connect("mongodb://mongolol/docker");
 
 module.exports = db;
